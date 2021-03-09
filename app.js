@@ -15,7 +15,6 @@ var port=8080;
 var app = express();
 var user= require('./routes/user.router')
 var indexRouter = require('./routes/index');
-//mongoose.connect("mongodb://localhost:27017/books",{useNewUrlParser:true});
 var url='mongodb+srv://LocDb:123@cluster0.sqawu.mongodb.net/books?retryWrites=true&w=majority';
 // Connect database
 

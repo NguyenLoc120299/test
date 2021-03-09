@@ -11,8 +11,7 @@ router.use(function (req, res, next) {
 });
 router.get('/', async function(req, res, next) {
     var successMsg= req.flash('success')[0]
-    var products= await Product.find({})
-    
+    var products= await Product.find()
         res.render('shops/index',{
             products:products,successMsg: successMsg ,noMessages: !successMsg
     })

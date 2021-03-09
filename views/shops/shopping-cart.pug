@@ -16,17 +16,17 @@ block content
                           
                           
                           td(style='font-weight: bold; ')=  product.item.title
-                          td.badge(style='position: absolute;left: 39%;')= product.qty
-                          td.label.label-success(style='position: absolute;left: 45%;')= product.item.price
+                          td.badge(style='position: absolute;left: 39%;')=product.item.pageCount
+                          td.label.label-success(style='position: absolute;left: 45%;')= product.item.pageCount
                           td.btn-group(style='position: absolute;left: 52%;')
                             button.btn.btn-primary.btn-xs.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
                               | Action 
                               span.caret
                             ul.dropdown-menu
                               li
-                                a(href='/reduce/'+ product.item._id) Reduce by 1
+                                a(href='/reduce/'+ product.item.id) Reduce by 1
                               li
-                                a(href='/remove/'+ product.item._id) Remove All
+                                a(href='/remove/'+ product.item.id) Remove All
 
                             
             .row
